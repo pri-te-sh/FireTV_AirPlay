@@ -132,22 +132,11 @@ adb shell appops set com.pritesh.airplay SYSTEM_ALERT_WINDOW allow
 ## 🧠 How it works
 
 ```mermaid
-flowchart LR
-    phone["📱 iPhone / iPad / Mac"]
-    subgraph tv["📺 Fire TV · AirPlay app"]
-        bonjour["Bonjour<br/>_airplay · _raop"]
-        rtsp["RTSP / HTTP :7000<br/>pairing · FairPlay"]
-        mirror["Mirror stream<br/>AES-CTR → H.264"]
-        audio["Audio stream<br/>AES-CBC → ALAC / AAC-ELD"]
-        cast["/play<br/>MediaPlayer + /event"]
-        screen["Player screen"]
-    end
-    phone -- discovers --> bonjour
-    phone -- control --> rtsp
-    rtsp --> mirror & audio & cast
-    mirror -- hardware decode --> screen
-    audio -- AudioTrack --> screen
-    cast --> screen
+flowchart TB
+    phone["📱 iPhone · iPad · Mac"] -->|"Bonjour discovery · RTSP control<br/>pairing · FairPlay decryption"| rx["📺 AirPlay app on Fire TV"]
+    rx --> m["🪞 Mirroring<br/>H.264, hardware-decoded"]
+    rx --> a["🎵 Audio<br/>ALAC · AAC-ELD"]
+    rx --> v["🎬 App video<br/>Fire OS media player"]
 ```
 
 <details>
