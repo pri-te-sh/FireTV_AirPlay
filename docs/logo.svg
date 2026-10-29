@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0A84FF"/>
+      <stop offset="0.55" stop-color="#5E5CE6"/>
+      <stop offset="1" stop-color="#BF5AF2"/>
+    </linearGradient>
+    <linearGradient id="shine" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#FFFFFF" stop-opacity="0.28"/>
+      <stop offset="0.5" stop-color="#FFFFFF" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <rect width="512" height="512" rx="112" fill="url(#bg)"/>
+  <rect width="512" height="512" rx="112" fill="url(#shine)"/>
+  <!-- The app's AirPlay glyph (res/drawable/ic_airplay.xml), 24-unit grid scaled up. -->
+  <g transform="translate(64 70) scale(16)" fill="#FFFFFF">
+    <path d="M4,3h16a2,2 0,0 1,2 2v10a2,2 0,0 1,-2 2h-2.6l-1.6,-1.8h4.2a0.2,0.2 0,0 0,0.2 -0.2v-10a0.2,0.2 0,0 0,-0.2 -0.2h-16a0.2,0.2 0,0 0,-0.2 0.2v10a0.2,0.2 0,0 0,0.2 0.2h4.2l-1.6,1.8h-2.6a2,2 0,0 1,-2 -2v-10a2,2 0,0 1,2 -2z"/>
+    <path d="M12,13.2l5.4,6.3a0.5,0.5 0,0 1,-0.38 0.83h-10.04a0.5,0.5 0,0 1,-0.38 -0.83z"/>
+  </g>
+</svg>
